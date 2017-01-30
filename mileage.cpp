@@ -7,11 +7,11 @@ using namespace std;
 class MPG_log
 {
     public:
-        double mpg(double odometer_i, double odometer_n, double gallons)
+        double mpg(double last_odometer, double this_odometer, double gallons)
         {
             double milesPerGallon;
 
-            milesPerGallon = (odometer_n - odometer_i) / gallons;
+            milesPerGallon = (this_odometer - last_odometer) / gallons;
 
             if (milesPerGallon < 0) milesPerGallon = milesPerGallon * -1;  // If user enters odometer less than the initial. Which shouldn't
 
